@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Valentine 💘</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 3em;
+        }
+
+        .buttons {
+            position: absolute;
+            bottom: 40px;
+            width: 100%;
+        }
+
+        #yes {
+            position: absolute;
+            left: 40px;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        #no {
+            position: absolute;
+            right: 40px;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Veux-tu être ma Valentine ? 💌</h1>
+
+    <div class="buttons">
+        <button id="yes" onclick="goYes()">Oui</button>
+        <button id="no" onclick="growYes()">Non</button>
+    </div>
+
+    <script>
+        let size = 20;
+
+        function growYes() {
+            size += 10;
+            const yesButton = document.getElementById("yes");
+            yesButton.style.fontSize = size + "px";
+            yesButton.style.padding = (size / 2) + "px";
+        }
+
+        function goYes() {
+            window.location.href = "merci.html";
+        }
+    </script>
+
+</body>
+</html>
